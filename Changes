@@ -1,5 +1,9 @@
 Revision history for Perl extension WWW::Scraper::ISBN::Record.
 
-0.16 3-30-2004
+0.17 - 04/06/2004 - A. Schamp
+	Removed exporter and perl version stuff
+	at user request.
+
+0.16 - 03/30/2004 - A. Schamp
 	Started using Changes file.
 	Fixed some documentation.
