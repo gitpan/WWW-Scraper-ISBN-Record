@@ -25,7 +25,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.14';
+our $VERSION = '0.16';
 
 
 # Preloaded methods go here.
@@ -79,11 +79,12 @@ __END__
 
 =head1 NAME
 
-WWW::Scraper::ISBN::Record - Book Record class for WWW::Scraper::ISBN module.
+WWW::Scraper::ISBN::Record - Book Record class for L<WWW::Scraper::ISBN> module.
 
 =head1 SYNOPSIS
 
-  used from within WWW::Scraper::ISBN.  No need to invoke directly.  But if you want to:
+used from within WWW::Scraper::ISBN.  No need to invoke directly.  But if you want to:
+
   use WWW::Scraper::ISBN::Record;
   $record = WWW::Scraper::ISBN::Record->new();
 
@@ -108,9 +109,9 @@ WWW::Scraper::ISBN::Record - Book Record class for WWW::Scraper::ISBN module.
 =head1 DESCRIPTION
 
 The WWW::Scraper::ISBN::Record module defines a class that can be used to deal with book information.  It was primarily 
-created as a return type for the WWW::Scraper::ISBN module, though it could be used for other purposes.  It knows minimal 
+created as a return type for the L<WWW::Scraper::ISBN> module, though it could be used for other purposes.  It knows minimal 
 information about itself, whether the book was found, where it was found, its ISBN number, and whether any errors occurred.  
-It is usually up to the WWW::Scraper::ISBN::Driver and its subclasses to make sure that the fields get set correctly.
+It is usually up to the L<WWW::Scraper::ISBN::Driver> and its subclasses to make sure that the fields get set correctly.
 
 =head2 EXPORT
 
@@ -118,73 +119,83 @@ None by default.
 
 =head1 METHODS
 
-=head2 new()
+=over 4
 
-Class Constructor.  Usually invoked by WWW::Scraper::ISBN->search().  Takes no parameters, creates an object with the 
+=item C<new()>
+
+Class Constructor.  Usually invoked by C<< WWW::Scraper::ISBN->search() >>.  Takes no parameters, creates an object with the 
 default values:
-isbn = undef;
-found = 0;
-found_in = undef;
-book = undef;
-error = "";
 
-=head2 isbn() or isbn($isbn_number)
+    isbn = undef;
+    found = 0;
+    found_in = undef;
+    book = undef;
+    error = "";
 
-print $record->isbn; # returns the ISBN number string
-$record->isbn("123456789X"); # set the ISBN 
+=item C<isbn() or isbn($isbn_number)>
+
+    print $record->isbn; # returns the ISBN number string
+    $record->isbn("123456789X"); # set the ISBN 
 
 Accessor/Mutator method for handling the ISBN associated with this record.  
 
-=head2 found() or found($bool)
+=item C<found() or found($bool)>
 
-if ($record->found) { # ... }
-$record->found(1);
+    if ($record->found) { # ... }
+    $record->found(1);
 
 Accessor/Mutator method for handling the search status of this record.  This is 0 by default, and should only be set to 
-true if the Record object contains the desired information, as retrieved by WWW::Scraper::ISBN::Record->book().
+true if the Record object contains the desired information, as retrieved by C<< WWW::Scraper::ISBN::Record->book() >>.
 
-=head2 found_in() or found_in($DRIVER_NAME)
+=item C<found_in() or found_in($DRIVER_NAME)>
 
-print $record->found_in;
-$record->found_in("Driver_name");
+    print $record->found_in;
+    $record->found_in("Driver_name");
 
-Accessor/Mutator method for handling the WWW::Scraper::ISBN::Driver subclass that first successfully retrieved the 
+Accessor/Mutator method for handling the L<WWW::Scraper::ISBN::Driver> subclass that first successfully retrieved the 
 desired record.  Please note that this may depend upon the order in which the drivers are invoked, as set by 
-WWW::Scraper::ISBN->drivers().  Returns the driver name of the successful driver, e.g. "LOC" if found by 
-WWW::Scraper::ISBN::LOC_Driver->search.
+C<< WWW::Scraper::ISBN->drivers() >>.  Returns the driver name of the successful driver, e.g. "LOC" if found by 
+C<< WWW::Scraper::ISBN::LOC_Driver->search() >>.
 
-=head2 book() or book($hashref)
+=item C<book() or book($hashref)>
 
-my $book = $record->book;
-print $book->{'title'};
-print $book->{'author'};
-$another_book = { 'title' => "Some book title",
+   my $book = $record->book;
+   print $book->{'title'};
+   print $book->{'author'};
+   $another_book = { 'title' => "Some book title",
 		  'author' => "Author of some book"
 		}; 
-$record->book( $another_book );
+   $record->book( $another_book );
 
 Accessor/Mutator method for handling the book information retrieved by the driver.  Set to a hashref by the driver, returns 
 a hashref when invoked alone.  The resulting hash should contain the standard fields as specified by 
-WWW::Scraper::ISBN::Driver, and possibly additional fields based on the driver used.
+L<WWW::Scraper::ISBN::Driver>, and possibly additional fields based on the driver used.
 
-=head2 error() or error($error_string)
+=item C<error() or error($error_string)>
 
-print $record->error;
-$record->error("Invalid ISBN number, or some similar error.");
+    print $record->error;
+    $record->error("Invalid ISBN number, or some similar error.");
 
 Accessor/Mutator method for handling any errors which occur during the search.  The search drivers may add errors to record 
 fields, which may be useful in gleaning information about failed searches.
 
+=back
+
 =head1 SEE ALSO
 
-WWW::Scraper::ISBN
-WWW::Scraper::ISBN::Driver
+=over 4
 
-No mailing list or website currently available.  Primary development done through CSX [http://csx.calvin.edu/].
+=item L<WWW::Scraper::ISBN>
+
+=item L<WWW::Scraper::ISBN::Driver>
+
+=back
+
+No mailing list or website currently available.  Primary development done through CSX ( L<http://csx.calvin.edu/> ).
 
 =head1 AUTHOR
 
-Andy Schamp, E<lt>ams5@calvin.eduE<gt>
+Andy Schamp, E<lt>andy@schamp.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
