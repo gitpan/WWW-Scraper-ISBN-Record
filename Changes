@@ -1,9 +1,17 @@
-Revision history for Perl extension WWW::Scraper::ISBN::Record.
+Revision history for WWW::Scraper::ISBN::Record
+===============================================
 
-0.17 - 04/06/2004 - A. Schamp
-	Removed exporter and perl version stuff
-	at user request.
+0.18    2013-08-25
+        - New Maintainer: Barbie.
+        - move module into lib directory structure.
+        - change file dates changed to meet W3CDTF standards.
+        - reworked Makefile.PL for clarity.
+        - added META.json and updated META.yml.
+        - extended test suite.
 
-0.16 - 03/30/2004 - A. Schamp
-	Started using Changes file.
-	Fixed some documentation.
+0.17    2004-06-04
+	    - Removed exporter and perl version stuff at user request.
+
+0.16    2004-30-03
+	    - Started using Changes file.
+	    - Fixed some documentation.

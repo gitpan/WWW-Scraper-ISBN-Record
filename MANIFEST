@@ -1,6 +1,13 @@
 Changes
+lib/WWW/Scraper/ISBN/Record.pm
 Makefile.PL
 MANIFEST
+META.json
+META.yml
 README
-Record.pm
-t/1.t
+t/01base.t
+t/90podtest.t
+t/91podcover.t
+t/94metatest.t
+t/95changedate.t
+t/96metatest.t

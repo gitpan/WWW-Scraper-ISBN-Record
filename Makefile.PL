@@ -1,10 +1,22 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use 5.006;
+
 use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
+
 WriteMakefile(
-    'NAME'		=> 'WWW::Scraper::ISBN::Record',
-    'VERSION_FROM'	=> 'Record.pm', # finds $VERSION
-    'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
-       (AUTHOR     => 'Andy Schamp <ams5@calvin.edu>') : ()),
+    AUTHOR              => 'Barbie <barbie@cpan.org>',
+    NAME                => 'WWW::Scraper::ISBN::Record',
+    VERSION_FROM        => 'lib/WWW/Scraper/ISBN/Record.pm',
+    ABSTRACT            => 'Book Record class for WWW::Scraper::ISBN module',
+    NO_META             => 1,
+    PREREQ_PM           => {
+
+        # build/test prereqs
+        'IO::File'                      => '0',
+        'Test::More'                    => '0.70'
+
+    }
 );

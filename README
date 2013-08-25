@@ -1,12 +1,15 @@
-WWW/Scraper/ISBN/Record version 0.16
-====================================
+WWW-Scraper-ISBN-Record
+=======================
 
 WWW::Scraper::ISBN::Record - Book Record class for WWW::Scraper::ISBN module.
 
-The WWW::Scraper::ISBN::Record module defines a class that can be used to deal with book information.  It was primarily
-created as a return type for the WWW::Scraper::ISBN module, though it could be used for other purposes.  It knows minimal
-information about itself, whether the book was found, where it was found, its ISBN number, and whether any errors occurred.
-It is usually up to the WWW::Scraper::ISBN::Driver and its subclasses to make sure that the fields get set correctly.
+The WWW::Scraper::ISBN::Record module defines a class that can be used to deal 
+with book information. It was primarily created as a return type for the 
+WWW::Scraper::ISBN module, though it could be used for other purposes. It 
+knows minimal information about itself, whether the book was found, where it 
+was found, its ISBN number, and whether any errors occurred. It is usually up
+to the WWW::Scraper::ISBN::Driver and its subclasses to make sure that the 
+fields get set correctly.
 
 INSTALLATION
 
@@ -25,10 +28,8 @@ None, though it is required by WWW::Scraper::ISBN
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
+  Copyright (C) 2004-2013 Andy Schamp, andy@schamp.net
+  Copyright (C) 2013      Barbie, barbie@cpan.org
 
-Copyright (C) 2004 Andy Schamp
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself. 
-
+  This distribution is free software; you can redistribute it and/or
+  modify it under the Artistic Licence v2.
