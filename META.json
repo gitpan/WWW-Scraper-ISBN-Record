@@ -1,6 +1,6 @@
 {
     "name": "WWW-Scraper-ISBN-Record",
-    "version": "0.18",
+    "version": "0.19",
     "abstract": "Book Record class for WWW::Scraper::ISBN module",
     "author": [
       "Andy Schamp <andy@schamp.net>",
@@ -43,7 +43,7 @@
     "provides": {
         "WWW::Scraper::ISBN::Record": {
             "file": "lib/WWW/Scraper/ISBN/Record.pm",
-            "version": "0.18"
+            "version": "0.19"
         }
     },
     "no_index": {

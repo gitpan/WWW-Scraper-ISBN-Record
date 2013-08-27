@@ -3,7 +3,7 @@ package WWW::Scraper::ISBN::Record;
 use strict;
 use warnings;
 
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 sub new {
 	my $proto = shift;
@@ -20,35 +20,18 @@ sub new {
 	return $self;
 }
 
-sub isbn {
-	my $self = shift;
-	if (@_) { $self->{ISBN} = shift };
-	return $self->{ISBN};
-}
+sub isbn        { my $self = shift; return $self->_accessor('ISBN',@_)     }
+sub found       { my $self = shift; return $self->_accessor('FOUND',@_)    }
+sub found_in    { my $self = shift; return $self->_accessor('FOUND_IN',@_) }
+sub book        { my $self = shift; return $self->_accessor('BOOK',@_)     }
+sub error       { my $self = shift; return $self->_accessor('ERROR',@_)    }
 
-sub found {
-	my $self = shift;
-	if (@_) { $self->{FOUND} = shift };
-	return $self->{FOUND};
+sub _accessor {
+	my $self     = shift;
+	my $accessor = shift;
+	if (@_) { $self->{$accessor} = shift };
+	return $self->{$accessor};
 }
-
-sub found_in {
-	my $self = shift;
-	if (@_) { $self->{FOUND_IN} = shift };
-	return $self->{FOUND_IN};
-}
-
-sub book {
-    my $self = shift;
-    if (@_) { $self->{BOOK} = shift };
-    return $self->{BOOK};
-}
-
-sub error {
-	my $self = shift;
-    if (@_) { $self->{ERROR} = shift };
-    return $self->{ERROR};
-}       
 
 1;
 
