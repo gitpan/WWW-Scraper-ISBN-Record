@@ -1,6 +1,10 @@
 Revision history for WWW::Scraper::ISBN::Record
 ===============================================
 
+0.20    2014-04-06
+        - added LICENSE file.
+        - added deprecation warning.
+
 0.19    2013-08-27
         - American dates!
         - cleaned up code.

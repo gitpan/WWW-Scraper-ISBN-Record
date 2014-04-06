@@ -1,6 +1,13 @@
 WWW-Scraper-ISBN-Record
 =======================
 
+WARNING:
+
+This distribution will be deprecated in the near future. The module within is
+to be merged into the main WWW-Scraper-ISBN distribution.
+
+DESCRIPTION
+
 WWW::Scraper::ISBN::Record - Book Record class for WWW::Scraper::ISBN module.
 
 The WWW::Scraper::ISBN::Record module defines a class that can be used to deal 
@@ -29,7 +36,7 @@ None, though it is required by WWW::Scraper::ISBN
 COPYRIGHT AND LICENCE
 
   Copyright (C) 2004-2013 Andy Schamp, andy@schamp.net
-  Copyright (C) 2013      Barbie, barbie@cpan.org
+  Copyright (C) 2013-2014 Barbie, barbie@cpan.org
 
   This distribution is free software; you can redistribute it and/or
   modify it under the Artistic Licence v2.

@@ -3,7 +3,7 @@ package WWW::Scraper::ISBN::Record;
 use strict;
 use warnings;
 
-our $VERSION = '0.19';
+our $VERSION = '0.20';
 
 sub new {
 	my $proto = shift;
@@ -42,6 +42,11 @@ __END__
 =head1 NAME
 
 WWW::Scraper::ISBN::Record - Book Record class for L<WWW::Scraper::ISBN> module.
+
+=head1 WARNING
+
+This distribution will be deprecated in the near future. The module within is
+to be merged into the main WWW-Scraper-ISBN distribution.
 
 =head1 SYNOPSIS
 
@@ -158,12 +163,12 @@ fields, which may be useful in gleaning information about failed searches.
 =head1 AUTHOR
 
   2004-2013 Andy Schamp, E<lt>andy@schamp.netE<gt>
-  2013      Barbie, E<lt>barbie@cpan.orgE<gt>
+  2013-2014 Barbie, E<lt>barbie@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
   Copyright 2004-2013 by Andy Schamp
-  Copyright 2013 by Barbie
+  Copyright 2013-2014 by Barbie
 
   This distribution is free software; you can redistribute it and/or
   modify it under the Artistic Licence v2.
