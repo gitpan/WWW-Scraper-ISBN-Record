@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     WWW-Scraper-ISBN-Record
-version:                  0.20
+version:                  0.21
 abstract:                 Book Record class for WWW::Scraper::ISBN module
 author:
   - Andy Schamp <andy@schamp.net>
@@ -24,7 +24,7 @@ build_requires:
 provides:
   WWW::Scraper::ISBN::Record:
     file:     lib/WWW/Scraper/ISBN/Record.pm
-    version:  0.20
+    version:  0.21
 
 no_index:
   directory:
